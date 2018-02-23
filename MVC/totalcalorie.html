@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        .header{
+            width:100%;
+            background-color:rgb(18, 40, 241);
+            text-align: center;
+            color:white;
+        }
+        h1{
+            margin:auto;
+            padding:20px;
+        }
+        .labelcontainer{
+            width:50%;
+        }
+        .container{
+            display:flex;
+            width:100%;
+        }
+        input[type="text"],
+        input[type="number"]{
+            border:none;
+            border-bottom:0.5px solid rgb(172, 154, 154);
+            width:95%;
+            margin:20px 0 0 0;
+        }
+        .clrbutton{
+            float:right;
+            
+        }
+        .clearall{
+            padding:10px 5px;
+            background-color:rgb(34, 116, 119);
+            color:white;
+            margin:0 20px 0 0;    
+        }
+        .fieldcontainer{
+            border:none;
+            margin:50px auto 10px auto;
+            /* border-bottom:0.5px solid rgb(34, 17, 17); */
+        }
+        .maintable{
+            width:90%;
+            text-align:center;
+    
+        }
+        .totalcalorie{
+            text-align:center;
+        }
+        .addbtn{
+            background-color: blue;
+            border:none;
+            padding:4px;
+            color:white;
+        }
+        .updatebtn{
+            background-color: rgb(243, 247, 8);
+            border:none;
+            padding:4px;
+            display: none;
+            color:white;
+        }
+        .deletebtn{
+            background-color: rgb(245, 63, 8);
+            border:none;
+            padding:4px;
+            display: none;
+            color:white;
+        }
+        .fieldbtns{
+            margin:10px 10px 60px 10px;
+        }
+    </style>
+</head>
+<body style="margin:0">
+    <header class="header">
+        <h1>Trackcalorie <span class="clrbutton"><button class="clearall">Clear all</button></span></h1>
+    </header>
+    <fieldset class="fieldcontainer">
+    <form action="">
+        <h2>Add Meal /Food item</h2>
+        <div class="container">             
+            <div class="labelcontainer">
+                <label for="meal"><b>meal:</b></label></br>
+                <input type="text" placeholder="name of meal" id="meal">
+            </div>
+            <div class="labelcontainer">
+                <label for="amount"><b>amount:</b></label></br>
+                <input type="number"  placeholder="amount of calories" id="amount">
+            </div>
+        </div>        
+    </form>
+</fieldset>
+<div class="fieldbtns">
+    <button class="addbtn" id="addMeal">+AddMeal</button>
+    <button class="updatebtn" id="updateMeal">UpdateMeal</button>
+    <button class="deletebtn" id="deleteMeal">DeleteMeal</button>
+</div>
+<div class="totalcalorie">
+    <h2 id="totalCalorie"></h2>
+</div>
+<div>
+    <table id="maintable" class="maintable">
+        <tr>
+            <th>Meal Name</th>
+            <th>Value of calories</th>
+            <th>Action</th>
+        </tr>
+    </table>
+    <script src="main.js"></script>
+</div>
+</body>
+</html>
